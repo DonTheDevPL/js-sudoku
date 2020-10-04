@@ -2,7 +2,6 @@
     border-style: solid;
     border-color: black;
     width: 200px;
-    margin: 5px;
 }
 td{
     border-style: solid;
@@ -13,7 +12,7 @@ td{
 #pole_gry{
     display: flex;
     justify-content: center;
-    width: 630px;
+    width: 600px;
     flex-wrap: wrap;
     margin: auto;
 }
