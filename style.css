@@ -12,7 +12,13 @@ td{
 #pole_gry{
     display: flex;
     justify-content: center;
-    width: 600px;
+    width: 700px;
     flex-wrap: wrap;
     margin: auto;
+}
+.input_pl{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
 }
