@@ -94,3 +94,21 @@ function handleInput(id1,id2,value){
 		document.getElementById(id1+'_'+id2).disabled = true;
 	}
 }
+function prepareArrayForInterpreter(array){
+	let finallArray=[];
+	let offset = 0;
+	let hardoffset = 0;
+	for(var i=0; i<9;i++){
+			finallArray.push(array[0+offset]);
+			finallArray.push(array[1+offset]);			
+			finallArray.push(array[2+offset]);
+			finallArray.push(array[9+offset]);
+			finallArray.push(array[10+offset]);
+			finallArray.push(array[11+offset]);
+			finallArray.push(array[18+offset]);
+			finallArray.push(array[19+offset]);
+			finallArray.push(array[20+offset]);
+			offset = offset +3;
+	}
+	return finallArray;
+}
