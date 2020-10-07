@@ -22,3 +22,13 @@ td{
     font-size: 30px;
     text-align: center;
 }
+#menu_dol{
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+#przycisk{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+}

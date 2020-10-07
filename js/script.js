@@ -1,3 +1,7 @@
+class SudokuPlansza{
+	PlanszaWzor;
+	PlanszaInput;
+}
 function serveGamePart(id) {
 	let tabela =
 		`<table class="pole">\n` +
@@ -134,6 +138,7 @@ function prepareArrayForInterpreter(array){
 			finallArray.push(array[73+offset]);
 			finallArray.push(array[74+offset]);
 			offset = offset +3;
-		}		
+		}
+		SudokuPlansza.PlanszaWzor = array;
 	return finallArray;
 }
