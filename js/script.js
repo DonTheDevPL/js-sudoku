@@ -97,8 +97,7 @@ function handleInput(id1,id2,value){
 function prepareArrayForInterpreter(array){
 	let finallArray=[];
 	let offset = 0;
-	let hardoffset = 0;
-	for(var i=0; i<9;i++){
+	for(var i=0; i<3;i++){
 			finallArray.push(array[0+offset]);
 			finallArray.push(array[1+offset]);			
 			finallArray.push(array[2+offset]);
@@ -109,6 +108,32 @@ function prepareArrayForInterpreter(array){
 			finallArray.push(array[19+offset]);
 			finallArray.push(array[20+offset]);
 			offset = offset +3;
-	}
+		}
+		offset = 0;
+		for(var i=0; i<3;i++){
+			finallArray.push(array[27+offset]);
+			finallArray.push(array[28+offset]);			
+			finallArray.push(array[29+offset]);
+			finallArray.push(array[36+offset]);
+			finallArray.push(array[37+offset]);
+			finallArray.push(array[38+offset]);
+			finallArray.push(array[45+offset]);
+			finallArray.push(array[46+offset]);
+			finallArray.push(array[47+offset]);
+			offset = offset +3;
+		}
+		offset = 0;
+		for(var i=0; i<3;i++){
+			finallArray.push(array[54+offset]);
+			finallArray.push(array[55+offset]);			
+			finallArray.push(array[56+offset]);
+			finallArray.push(array[63+offset]);
+			finallArray.push(array[64+offset]);
+			finallArray.push(array[65+offset]);
+			finallArray.push(array[72+offset]);
+			finallArray.push(array[73+offset]);
+			finallArray.push(array[74+offset]);
+			offset = offset +3;
+		}		
 	return finallArray;
 }
