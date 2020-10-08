@@ -1,6 +1,7 @@
 class SudokuPlansza{
 	PlanszaWzor;
 	PlanszaInput;
+	PlanszaFinall;
 }
 function serveGamePart(id) {
 	let tabela =
@@ -140,5 +141,6 @@ function prepareArrayForInterpreter(array){
 			offset = offset +3;
 		}
 		SudokuPlansza.PlanszaWzor = array;
+		SudokuPlansza.PlanszaFinall = finallArray;		
 	return finallArray;
 }
