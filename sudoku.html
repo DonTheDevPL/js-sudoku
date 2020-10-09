@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="pole_gry">
+    <div id="gra">
+        <div id="pole_gry">
+        </div>
+        <div id="menu_bok">
+            <input type="button" id="przycisk2" class="przycisk" value="Rozpocznij grę" onclick="fillGame(prepareArrayForInterpreter(sudokuPlanszaTest))">
+            <input type="button" id="przycisk1" class="przycisk" value="Sprawdź poprawność" onclick="validateGame()">
+      
+        </div>
     </div>
-    <div id="menu_dol"><input type="button" id="przycisk" value="Sprawdź poprawność">
     <script src="js/script.js"></script>
     <script src="js/walidacja.js"></script>
     <script>
         makeGame()
         addInputValidation()
-        fillGame(prepareArrayForInterpreter(sudokuPlanszaTest))
     </script>
 </body>
 </html>

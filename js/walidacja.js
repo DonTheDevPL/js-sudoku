@@ -3,7 +3,6 @@ function addInputValidation() {
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].addEventListener('input', updateValue, false);
     }
-    document.getElementById("przycisk").addEventListener('click',validateGame);
 }
 function updateValue() {
     if (!((this.value > 0) && (this.value < 10))) {
@@ -80,16 +79,14 @@ function getInputsValue(){
 }
 function validateGame() {
     let suma = 0;
-    let counter = 0
-    let plansza = getInputsValue()
-    //SudokuPlansza.plansza;
+    let counter = 0;
+    let plansza = getInputsValue();
     var offset = 0;
     for (var x = 0; x< 9; x++) {  
         suma = 0;
         for (var i = 0; i < 9; i++) {
             suma = suma + plansza[i+offset];
-            console.log(suma);
-            
+            //console.log(suma);            
         }
         offset = offset+9;
         if (suma != 45) {
@@ -104,7 +101,7 @@ function validateGame() {
             suma = 0;
             for (var i = 0; i < 9; i++) {
                 suma = suma + plansza[9*i+offset2];
-                console.log(suma);
+                //console.log(suma);
             }
             if (suma != 45) {
                 break;

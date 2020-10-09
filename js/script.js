@@ -35,7 +35,9 @@ function makeGame() {
 	pole.innerHTML = wstaw;
 }
 let sudokuPlanszaTest = [1,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,1,3,4,5,6,7,8,9,1,2,4,5,6,7,8,9,1,2,3,5,6,7,8,9,1,2,3,4,6,7,8,9,1,2,3,4,5,7,8,9,1,2,3,4,5,6,8,9,1,2,3,4,5,6,7,9,1,2,3,4,5,6,7,8];
-function fillGame(plansza){
+function fillGame(planszaBP){
+	deleteGame();
+	let plansza = removeRandomElement(planszaBP,5);
 	let id1 = 1;
 	let id2 = 1;
 		for(var i=0;i<=8;i++){
@@ -93,7 +95,7 @@ function fillGame(plansza){
 }
 function handleInput(id1,id2,value){
 	//debug
-	console.log("Ustawiam wartosc "+value+" dla id="+id1+'_'+id2)
+	//console.log("Ustawiam wartosc "+value+" dla id="+id1+'_'+id2)
 	if(value != 0){
 		document.getElementById(id1+'_'+id2).value = value;
 		document.getElementById(id1+'_'+id2).disabled = true;
@@ -143,4 +145,24 @@ function prepareArrayForInterpreter(array){
 		SudokuPlansza.PlanszaWzor = array;
 		SudokuPlansza.PlanszaFinall = finallArray;		
 	return finallArray;
+}
+function removeRandomElement(array,difficulty){
+	let parsedArray = [];
+	let randomInt;
+	for(var i in array){
+		randomInt = Math.round(Math.random()*10);
+		if(randomInt > difficulty){
+			parsedArray.push(array[i])
+		}else{
+			parsedArray.push(0);
+		}
+	}
+	return parsedArray;
+}
+function deleteGame(){
+	let inputs = document.getElementsByClassName('input_pl');
+    for (var i = 0; i < inputs.length; i++) {
+		inputs[i].value = '';
+		inputs[i].disabled = false;
+	}
 }
