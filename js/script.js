@@ -165,4 +165,5 @@ function deleteGame(){
 		inputs[i].value = '';
 		inputs[i].disabled = false;
 	}
+	document.getElementById("tekst_w").innerText = "Rozwiąż sudoku";
 }

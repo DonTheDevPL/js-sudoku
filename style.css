@@ -14,7 +14,8 @@ td{
     justify-content: center;
     width: 700px;
     flex-wrap: wrap;
-    margin: auto;
+    margin-right: 75px;
+    margin-left: auto;
 }
 .input_pl{
     width: 40px;
@@ -22,13 +23,35 @@ td{
     font-size: 30px;
     text-align: center;
 }
-#menu_dol{
-    margin-top: 30px;
+#menu_bok{
     justify-content: center;
-    display: flex;
+    margin-right: auto;
+    width: 510px;
 }
-#przycisk{
+#przciski{
+    width: 510px;
+}
+.przycisk{
     width: 250px;
     height: 50px;
     font-size: 20px;
+}
+#gra{
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+}
+#wiadomosci{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+#tekst_w{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
 }

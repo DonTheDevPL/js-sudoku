@@ -12,8 +12,12 @@
         <div id="pole_gry">
         </div>
         <div id="menu_bok">
-            <input type="button" id="przycisk2" class="przycisk" value="Rozpocznij grę" onclick="fillGame(prepareArrayForInterpreter(sudokuPlanszaTest))">
-            <input type="button" id="przycisk1" class="przycisk" value="Sprawdź poprawność" onclick="validateGame()">
+            <div id="wiadomosci"></div>
+            <div id="tekst_w"></div>
+            <div id="przyciski">
+                <input type="button" id="przycisk2" class="przycisk" value="Nowa Gra" onclick="fillGame(prepareArrayForInterpreter(sudokuPlanszaTest))">
+                <input type="button" id="przycisk1" class="przycisk" value="Sprawdź Poprawność" onclick="validateGame()">
+            </div> 
       
         </div>
     </div>
@@ -22,6 +26,7 @@
     <script>
         makeGame()
         addInputValidation()
+        document.getElementById("tekst_w").innerText = "Rozwiąż sudoku";        
     </script>
 </body>
 </html>

@@ -90,7 +90,7 @@ function validateGame() {
         }
         offset = offset+9;
         if (suma != 45) {
-            alert("blad");
+            document.getElementById("tekst_w").innerText = "Błąd! Sudoku nie jest wypełnnione poprawnie";
             break;
         } else {counter++; }
     }
@@ -104,9 +104,13 @@ function validateGame() {
                 //console.log(suma);
             }
             if (suma != 45) {
-                break;
-                alert("blad");
+                document.getElementById("tekst_w").innerText = "Błąd! Sudoku nie jest wypełnnione poprawnie";
+                //alert("blad");
+                break;                
             } else {counter++; }
         }
+    }
+    if(counter ==9){
+        document.getElementById("tekst_w").innerText = "Brawo! Sudoku jest wypełnnione poprawnie";
     }
 }
