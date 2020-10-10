@@ -34,10 +34,31 @@ function makeGame() {
 	}
 	pole.innerHTML = wstaw;
 }
-let sudokuPlanszaTest = [1,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,1,3,4,5,6,7,8,9,1,2,4,5,6,7,8,9,1,2,3,5,6,7,8,9,1,2,3,4,6,7,8,9,1,2,3,4,5,7,8,9,1,2,3,4,5,6,8,9,1,2,3,4,5,6,7,9,1,2,3,4,5,6,7,8];
+function provideSudoku(){
+	let randomInt = Math.round(Math.random()*10);
+	let sudokuPlansza1 = [];
+	if(randomInt > 5){
+		return [1,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,1,3,4,5,6,7,8,9,1,2,4,5,6,7,8,9,1,2,3,5,6,7,8,9,1,2,3,4,6,7,8,9,1,2,3,4,5,7,8,9,1,2,3,4,5,6,8,9,1,2,3,4,5,6,7,9,1,2,3,4,5,6,7,8];
+	}else{
+		return [3,1,6,5,7,8,4,9,2,5,2,9,1,3,4,7,6,8,4,8,7,6,2,9,5,3,1,2,6,3,4,1,5,9,8,7,9,7,4,8,6,3,1,2,5,8,5,1,7,9,2,6,4,3,1,3,8,9,4,7,2,5,6,6,9,2,3,5,1,8,7,4,7,4,5,2,8,6,3,1,9];
+	}
+}
+function messWithGame(sudoku){
+	let game = [];
+	let randomInt = Math.round(Math.random()*10);
+	if (randomInt < 5) {
+		game = flipGame2(sudoku);
+		game = flipGame1(game);
+		game = flipGame2(game);
+	}else{
+		game = flipGame2(sudoku);
+		game = flipGame1(game);
+	}
+	return game;
+}
 function fillGame(planszaBP){
 	deleteGame();
-	let plansza = removeRandomElement(planszaBP,5);
+	let plansza = removeRandomElement(planszaBP,4);
 	let id1 = 1;
 	let id2 = 1;
 		for(var i=0;i<=8;i++){
@@ -166,4 +187,26 @@ function deleteGame(){
 		inputs[i].disabled = false;
 	}
 	document.getElementById("tekst_w").innerText = "Rozwiąż sudoku";
+}
+function flipGame1(array){
+	let parsedArray = [];
+	for(i in array){
+		parsedArray.push(array[80-i])
+	}
+	return parsedArray;
+}
+function flipGame2(array){
+	let parsedArray = [];
+	for(var i=0; i <9;i++){
+		parsedArray.push(array[i])
+		parsedArray.push(array[9+i])
+		parsedArray.push(array[18+i])
+		parsedArray.push(array[27+i])
+		parsedArray.push(array[36+i])
+		parsedArray.push(array[45+i])
+		parsedArray.push(array[54+i])
+		parsedArray.push(array[63+i])
+		parsedArray.push(array[72+i])																
+	}
+	return parsedArray;
 }
